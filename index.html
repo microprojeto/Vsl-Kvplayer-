@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#000;font-family:'Inter',sans-serif;color:#fff}
+  .container{max-width:900px;margin:0 auto;padding:40px 20px 70px}
+  .logo{text-align:center;font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:2px;font-size:22px;margin-bottom:8px}
+  .logo span{background:linear-gradient(90deg,#00F5FF,#00FF88);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .partner-badge{text-align:center;color:#00F5FF;font-size:11px;letter-spacing:2px;font-family:'Montserrat',sans-serif;font-weight:700;margin-bottom:35px;opacity:0.9}
+  h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:42px;line-height:1.1;text-align:center;color:#fff;text-transform:uppercase;margin:0}
+  .sub{color:#C7C7CC;text-align:center;font-size:18px;margin:18px auto 0;line-height:1.55;max-width:780px}
+  .sub strong{color:#fff}
+  .vsl-eyebrow{text-align:center;color:#00F5FF;font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:1.5px;margin:38px 0 14px}
+  .vsl-wrapper{margin:0 auto 26px;background:#050A14;border:1px solid rgba(0,245,255,0.35);border-radius:20px;padding:10px;box-shadow:0 0 35px rgba(0,245,255,0.18);position:relative;aspect-ratio:16/9;overflow:hidden}
+  .vsl-wrapper kv-player{width:100%;height:100%;display:block;border-radius:14px;overflow:hidden}
+  .cta-center{text-align:center;margin-bottom:10px}
+  .section{margin-top:80px;border-top:1px solid #111;padding-top:60px}
+  h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:28px;color:#fff;text-align:center;text-transform:uppercase;line-height:1.2;margin:0}
+  h2 span{color:#C7C7CC;font-weight:700}
+  .problem{max-width:720px;margin:28px auto 0;text-align:center}
+  .problem p{color:#C7C7CC;font-size:17px;line-height:1.75;margin:10px 0}
+  .question{margin:32px 0;font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;color:#fff;text-transform:uppercase;line-height:1.25}
+  .mechanism{background:linear-gradient(180deg,#0A121E 0%,#050A14 100%);border:1px solid #1A2333;border-radius:14px;padding:28px;margin-top:30px;text-align:center}
+  .mechanism-title{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:12px}
+  .mechanism p{color:#C7C7CC;font-size:16px;line-height:1.65;margin:0}
+  .mechanism strong{color:#fff}
+  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:40px}
+  .card{background:linear-gradient(180deg,#0A121E 0%,#050A14 100%);border:1px solid #1A2333;border-radius:12px;padding:25px}
+  .card-num{color:#00F5FF;font-family:'Montserrat',sans-serif;font-weight:900;font-size:14px;letter-spacing:2px}
+  .card h3{margin:10px 0;font-family:'Montserrat',sans-serif;font-size:18px;color:#fff}
+  .card p{color:#C7C7CC;font-size:15px;line-height:1.6;margin:0}
+  .comparison{margin-top:40px;overflow-x:auto}
+  table{width:100%;border-collapse:collapse;min-width:620px;background:#050A14;border:1px solid #1A2333;border-radius:12px;overflow:hidden}
+  th,td{padding:18px 16px;text-align:left;border-bottom:1px solid #1A2333}
+  th{font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;background:#0A121E;text-transform:uppercase;font-size:13px}
+  td{color:#C7C7CC;font-size:14px;line-height:1.4}
+  td.kv{color:#fff;font-weight:700}
+  .kv-check{color:#00FF88;font-weight:800}
+  .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:35px}
+  .price-card{background:#050A14;border:1px solid #1A2333;border-radius:12px;padding:22px;text-align:center}
+  .price-plays{font-family:'Montserrat',sans-serif;font-weight:900;font-size:22px;color:#fff}
+  .price-value{color:#00FF88;font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;margin:8px 0}
+  .price-desc{color:#888;font-size:12px;margin-bottom:14px}
+  .cta-section{margin-top:80px;border-top:1px solid #111;padding-top:60px;text-align:center}
+  .cta-sub{color:#C7C7CC;font-size:16px;line-height:1.6;max-width:650px;margin:0 auto}
+  .btn-oval{display:inline-block;background:linear-gradient(90deg,#00F5FF,#00FF88);color:#000;font-family:'Montserrat',sans-serif;font-weight:900;padding:21px 48px;border-radius:999px;text-decoration:none;text-transform:uppercase;margin-top:10px;transition:0.3s;box-shadow:0 8px 25px rgba(0,245,255,0.35);letter-spacing:0.5px;font-size:15px}
+  .btn-oval:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 12px 35px rgba(0,245,255,0.55)}
+  .btn-small{padding:12px 20px;font-size:13px;margin-top:12px}
+  .small{color:#666;font-size:13px;margin-top:16px}
+  .faq{margin-top:80px;border-top:1px solid #111;padding-top:60px}
+  .faq-item{border-bottom:1px solid #1A2333;padding:22px 0}
+  .faq-question{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;color:#fff;margin-bottom:8px}
+  .faq-answer{color:#C7C7CC;font-size:15px;line-height:1.6}
+  .footer{margin-top:80px;border-top:1px solid #111;padding-top:30px;text-align:center;color:#555;font-size:12px;line-height:1.6}
+  .footer a{color:#777;text-decoration:underline}
+  @media(max-width:600px){.container{padding:30px 16px 50px}h1{font-size:30px}.sub{font-size:16px}h2{font-size:23px}.question{font-size:20px}.btn-oval{width:100%;box-sizing:border-box;padding:20px 20px;font-size:14px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">KV<span>PLAYER</span></div>
+  <div class="partner-badge">SITE DE PARCEIRO AUTORIZADO • KVPLAYER PRÉ-PAGO</div>
+  <h1>PARE DE PAGAR MENSALIDADE E DE DESPERDIÇAR VIEWS</h1>
+  <p class="sub">Um player pré-pago em que a visualização só é contabilizada quando o visitante clica no PLAY.<br><strong>Sem mensalidade. Sem gastar seu saldo com quem nem deu PLAY.</strong></p>
+  <div class="vsl-eyebrow">DÊ O PLAY E ENTENDA COMO ECONOMIZAR SEU SALDO EM 47s</div>
+  <div class="vsl-wrapper">
+    <script src="https://scripts.kvplayer.com/player/kvplayer.js" data-api-url="https://api.kvplayer.com"></script>
+    <kv-player id="a45ad0c712" data-uuid="ac40a9a3-3e23-439c-a402-48d18aa9f22f" orientation="horizontal"></kv-player>
+  </div>
+  <div class="cta-center">
+    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval">QUERO MINHAS 50 VIEWS GRÁTIS →</a>
+    <p class="small">Ativação imediata • Teste gratuito • Sem mensalidade</p>
+  </div>
+  <div class="section">
+    <h2>SE VOCÊ TRABALHA COM VSL, <span>CADA VIEW TEM UM CUSTO</span></h2>
+    <div class="problem">
+      <p>Você coloca sua VSL na página.</p>
+      <p>O visitante chega.</p>
+      <p><strong style="color:#fff;">Mas nem todo visitante dá PLAY.</strong></p>
+      <div class="question">POR QUE GASTAR UMA VIEW COM QUEM NEM ASSISTIU?</div>
+    </div>
+    <div class="mechanism">
+      <div class="mechanism-title">CLICK REAL</div>
+      <p>Na KVPlayer, o modelo é simples: <strong>o play precisa acontecer para a visualização ser contabilizada.</strong></p>
+      <p style="margin-top:15px;">E se a mesma pessoa clicar novamente, <strong>a visualização não é contada novamente.</strong></p>
+    </div>
+  </div>
+  <div class="section">
+    <h2>ESCOLHA SEU PACOTE <span>PRÉ-PAGO</span></h2>
+    <div class="pricing-grid">
+      <div class="price-card"><div class="price-plays">500 Plays</div><div class="price-value">A partir de R$ 47</div><div class="price-desc">Ideal pra testar</div><a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval btn-small">ATIVAR</a></div>
+      <div class="price-card"><div class="price-plays">1.000 Plays</div><div class="price-value">Mais popular início</div><div class="price-desc">Para validar VSL</div><a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval btn-small">ATIVAR</a></div>
+      <div class="price-card"><div class="price-plays">3.000 Plays</div><div class="price-value">Melhor custo/benefício</div><div class="price-desc">Operação rodando</div><a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval btn-small">ATIVAR</a></div>
+      <div class="price-card"><div class="price-plays">7.000 Plays</div><div class="price-value">Escala</div><div class="price-desc">Tráfego alto</div><a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval btn-small">ATIVAR</a></div>
+      <div class="price-card"><div class="price-plays">10.000 Plays</div><div class="price-value">Alta escala</div><div class="price-desc">Player principal</div><a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval btn-small">ATIVAR</a></div>
+    </div>
+  </div>
+  <div class="cta-section">
+    <h2>SEU PLAYER NÃO PRECISA SER MAIS UM CUSTO FIXO</h2>
+    <p class="cta-sub">Teste o modelo pré-pago com contabilização baseada no PLAY.</p>
+    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval">QUERO MINHAS 50 VIEWS GRÁTIS</a>
+  </div>
+  <div class="footer">
+    Este site é de um PARCEIRO AUTORIZADO da KVPlayer e não é o site oficial.<br>
+    Site oficial: <a href="https://www.kvplayer.com?ref=erikvplayer" target="_blank">kvplayer.com</a> | KVPlayer® é marca registrada.<br>
+    Pacotes e valores sujeitos à tabela oficial da plataforma.
+  </div>
+</div>
+</body>
+  </html>
